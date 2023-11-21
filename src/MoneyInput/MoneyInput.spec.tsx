@@ -3,7 +3,7 @@ import { fireEvent, render } from '@testing-library/react'
 
 import '../../setupTests'
 import MoneyInput from './MoneyInput'
-import { Locales } from '../common/utils/LocaleFormatter'
+import { Locales } from './utils/LocaleFormatter'
 
 describe('<MoneyInput />', () => {
   test('should render correctly', () => {

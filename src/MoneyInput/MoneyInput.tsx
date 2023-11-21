@@ -1,7 +1,7 @@
 import { ChangeEvent, useRef, useEffect, useState, HTMLInputTypeAttribute } from 'react'
 import _styles from './MoneyInput.module.css'
-import { convertEuroToCents, isStringNaN, setCursor } from '../common/utils/utils'
-import LocaleFormatter, { Locales } from '../common/utils/LocaleFormatter'
+import { convertEuroToCents, isStringNaN, setCursor } from './utils/utils'
+import LocaleFormatter, { Locales } from './utils/LocaleFormatter'
 
 interface MoneyInputProps {
   value?: number | string
