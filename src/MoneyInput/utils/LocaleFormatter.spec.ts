@@ -95,6 +95,24 @@ describe('LocaleFormatter', () => {
         expect(lf.convertToLocale('123err')).toBe('123err')
       })
     })
+
+    describe('getCentsValue()', () => {
+      it('should return 123456 given "1,234.56"', () => {
+        expect(lf.getCentsValue('1,234.56')).toBe(123456)
+      })
+
+      it('should return 123457 given "1,234.569"', () => {
+        expect(lf.getCentsValue('1,234.569')).toBe(123457)
+      })
+
+      it('should return 0 given ""', () => {
+        expect(lf.getCentsValue('')).toBe(0)
+      })
+
+      it('should return NaN given "12err"', () => {
+        expect(lf.getCentsValue('12err')).toBe(NaN)
+      })
+    })
   })
 
   describe('de-DE', () => {
