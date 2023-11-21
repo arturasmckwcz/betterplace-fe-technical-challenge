@@ -1,0 +1,37 @@
+.money-input__label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--betterplace-dimension--3);
+
+  font: var(--betterplace-typography-base-bold);
+}
+
+.money-input__label input {
+  position: relative;
+
+  width: var(--betterplace-dimension-10);
+  height: var(--betterplace-dimension-4);
+
+  padding-inline: var(--betterplace-paragraph-spacing-md);
+
+  border: solid 1px var(--betterplace-color-gray-500);
+  border-radius: var(--betterplace-dimension--3);
+
+  outline-color: var(--betterplace-color-green-800);
+  outline-offset: var(--betterplace-dimension--3);
+  outline-width: var(--betterplace-dimension--4);
+
+  font: var(--betterplace-typography-lg);
+}
+
+.money-input__label input:hover {
+  box-shadow: var(--betterplace-shadow-outer-neutral-soft-2);
+}
+
+.money-input__label input:disabled {
+  opacity: var(--betterplace-color-opacity-light);
+}
+
+.money-input__label input[data-error] {
+  border: solid var(--betterplace-dimension--4) var(--betterplace-color-red-600);
+}

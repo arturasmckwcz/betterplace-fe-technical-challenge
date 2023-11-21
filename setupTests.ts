@@ -1,6 +1,7 @@
 import matchers, { TestingLibraryMatchers } from '@testing-library/jest-dom/matchers'
 import { afterEach, expect, vi } from 'vitest'
 import { cleanup } from '@testing-library/react'
+const { JSDOM } = require('jsdom')
 
 declare module 'vitest' {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -15,3 +16,7 @@ afterEach(() => {
   cleanup()
   vi.clearAllMocks()
 })
+
+const dom = new JSDOM('<!doctype html><html><body></body></html>')
+global.document = dom.window.document
+global.window = dom.window
